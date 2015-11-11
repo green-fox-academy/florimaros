@@ -1,0 +1,30 @@
+body {
+ margin: 0;
+}
+
+img {
+ width: 100%;
+ height: auto;
+}
+
+/* Ez itt nem is ertelmezodik */
+
+h1 {
+ font-weight: 900;
+ font-size: 36px;
+ margin-bottom: 0;
+ color: #444;
+}
+
+h2 {
+ font-weight: 300;
+ font-size: 32px;
+ margin-top: 0;
+ margin-bottom: 40px;
+ color: #999;
+}
+
+h1, h2 {
+ font-family: Lato;
+ text-align: center;
+}
