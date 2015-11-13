@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>CV</title>
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Florian Maros</h1>
+      </header>
+
+      <seciton>
+          <p><strong>student at greenfox academy<strong> goal oriented sales person with proven track record in b2b sales.</p>
+
+      <ul>
+          <li>Large scale construction projects oversight</li>
+          <li>Advanced forms of mind control</li>
+          <li>Planetary scale demolitions operations</li>
+          <li>Fugitive recovery services</li>
+      <ul>
+    </section>
+
+    <h2>Experience</h2>
+
+      <ul>
+
+      </ul>
+
+      <ul>
+        <li>
+            <h3>Sith Empire Headquarters, Dromund Kaas</h3>
+            <p>Supreme Commander of Imperial Forces, Emperor’s Enforcer</p>
+            <ul>
+              <li>As the right-hand man to Emperor Sidious, hunted down jedi survivors and enforced the will of the empire;</li>
+              <li>Oversaw construction of the first generation Death Star;</li>
+              <li>First ever Imperial Supreme Commander;</li>
+                </ul>
+                <h3>Wally’s Parts / Toyarian Watto junk shop, Mos Espa, Tatooine</h3>
+                <p>Enslaved Volunteer</p>
+              <ul>
+                  <li>General help and front-desk retail operations at the junk shop, second hand droid parts, mechanical / droid repair services;</li>
+                  <li>Designed and piloted custom-built Podracer, ran track-side operations for the podracing team;</li>
+              </ul>
+          </li>
+        </ul>
+
+
+
+        <section>
+
+        <h2>Formal training</h2>
+
+
+        <ul>
+          <li>
+            <h3>Green Fox Academy, Earth</h3>
+            <p>future full stack developer</p>
+            <ul>
+
+              <li>Padawan to Knight Tojas.</li>
+              <li>Learned programming with a specialisation in JavaScript and Front-end technologies</li>
+        </ul>
+          </li>
+              <h3>Faculty of Economics, University of Pecs</h3>
+              <p>major in marketing</p>
+              <ul>
+
+              </ul>
+              </li>learned marketing and management with a specialisation in b2b marketing</li>
+            <li>
+            <h3>College of Technical Sciences, University of Novi Sad</h3>
+            <p>major: in printing engineering</p>
+
+        </ul>learned printing engineering with a specialisation in production management
+
+        <h2>knowledge and skills</h2>
+        <ul>
+            <li>foreign languagues: Hungarian, Croatian, English;<li>
+            <li>Driving licence: “B” category (10.1998);</li>
+        </ul>
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+body {
+ color: #333;
+ font-family: 'josefine sans', sans serife;
+ line-height: 1.5;
+}
+
+h1 {
+ font family: 'Abril Fatface', serif;
+}
+
+.wrap {
+max-width: 40em;
+margin: 0 auto
+}
+
+height: auto;
+/* Ez itt nem is ertelmezodik */
+
+h1 {
+ font-weight: 900;
+ font-size: 36px;
+ margin-bottom: 0;
+ color: #444;
+}
+
+h2 {
+ font-weight: 300;
+ font-size: 32px;
+ margin-top: 0;
+ margin-bottom: 40px;
+ color: #999;
+}
+
+h1, h2 {
+ font-family: Lato;
+ text-align: center;
+}
