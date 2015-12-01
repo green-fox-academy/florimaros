@@ -12,10 +12,25 @@ TOKENS = {
 }
 
 def arabic2roman(arabic):
-    if arabic == 5:
-        return"V"
-    if arabic == 4:
-        return "IV"
+    output = ""
+    biggest_token = 0
+    while arabic > 0:
+        if arabic >= 5:
+        biggest_token = get_biggest_token(arabic)
+        output += TOKENS[str(biggest_token)]
+        arabic -= biggest_token
+    return output
+
+def get_biggest_token(current_number):
+    if current_number >= 5:
+        return 5
+    elif
+
+        pass
+    if arabic == 6:
+        return VI
+    if arabic == 5 or arabic == 4:
+        return TOKENS[str(arabic)]
     return "I" * arabic
 
 test(arabic2roman(0)), "", "It should handle 0")
