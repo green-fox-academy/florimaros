@@ -4,5 +4,4 @@ def reverse(input_list):
   while i >= 0:
       output_list.append(input_list[i])
       i -= 1  
-
   return output_list
