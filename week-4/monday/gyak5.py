@@ -9,4 +9,4 @@ def factorial(num):
         i += 1
     return output
 
-print(factorial(100))
+print(factorial(10))
