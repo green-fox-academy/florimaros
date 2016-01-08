@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 var list=[
   "galery1.jpg",
   "galery2.jpg",
@@ -9,10 +9,10 @@ var list=[
   "galery7.jpg"
 ];
 var prevbutton = document.querySelector(".prev")
-var nextbutton = document.querySelector('.next')
+var nextbutton = document.querySelector(".next")
 var picture = document.querySelector(".picture");
 var i = 0
-prevbutton.addEventListener('click', function() {
+prevbutton.addEventListener("click", function() {
   i = i - 1;
   if (i > 0 && i < list.length-1) {
     picture.setAttribute("src", list[i])
@@ -22,9 +22,10 @@ prevbutton.addEventListener('click', function() {
     picture.setAttribute("src", list[i])
   }
 
+
 });
 
-nextbutton.addEventListener('click', function() {
+nextbutton.addEventListener("click", function() {
   i = i + 1;
   if (i > 0 && i < list.length) {
     picture.setAttribute("src", list[i])
