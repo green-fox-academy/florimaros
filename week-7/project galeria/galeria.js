@@ -7,6 +7,7 @@ var list=[
   "galery5.jpg",
   "galery6.jpg",
   "galery7.jpg"
+
 ];
 var prevbutton = document.querySelector(".prev")
 var nextbutton = document.querySelector(".next")
