@@ -1,5 +1,5 @@
 var numbers = [3, 4, 5, 6, 7];
-function oddNumb(numlist) {
+function evenNumb(numlist) {
   var l = [];
   for (var i = 0; i<numlist.length ;i++) {
     if (numlist[i] % 2 === 0) {
@@ -8,4 +8,4 @@ function oddNumb(numlist) {
   }
   return l;
 }
-console.log(oddNumb(numbers));
+console.log(evenNumb(numbers));

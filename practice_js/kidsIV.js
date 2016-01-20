@@ -2,20 +2,23 @@
 //dolgokban megkeresni dolgokat a legfontosabb
 "use strict"
 var kids = [
-  {name: "Julika", age: 8, sex: "female"},
-  {name: "Julika", age: 8, sex: "female"},
-  {name: "Julika", age: 8, sex: "female"},
-  {name: "Julika", age: 8, sex: "female"},
-  {name: "Julika", age: 8, sex: "female"}
+  {name: 'Julika', age: 8, sex: 'female'},
+  {name: 'Tiborka', age: 7, sex: 'male'},
+  {name: 'Zsolti', age: 6, sex: 'male'},
+  {name: 'Gerda', age: 9, sex: 'female'},
+  {name: 'Zsomborka', age: 8, sex: 'male'}
 ];
 
-function (getTheLongestNamesAge(kids) {
-  var names = [];
-  kids.forEach(function(kid){
-    ages.push(kid.age);
-  });
-  return ages;
+function getTheLongestNamesAge (kids) {
+  var object = kids[0];
+  for (var i = 0; i<kids.length; i++ )  {
+    if (kids[i].name.length > object.name.length) {
+      object = kids[i];
+    } return object.age ;
+  }
+}
 
+//leghoszabb nevu gyerek korat add vissza
 //megkeresed a leghoszabb nevut es visszaadnad az age-et
 //for ciklus utan visszaadni az age-t, valtozoban tarolni az egesz gyereket,
 //vegigmenni es megvaltoztatni arra ai epp a leghoszabb
@@ -59,3 +62,13 @@ function getTheLongestNamesAge(kids) {
 
 
 console.log(getTheLongestNamesAge(kids));
+function getTheLongestNamesAge(kids)  {
+  var currentKidWithLongestName = kids[0];
+  for (var i = 1; i < kids.length; i++) {
+    if(currentKidWithLongestName.name.lingth < kids[i].name.length) {
+      currentKidWithLongestName = [i];
+    } return currentKidWithLongestName.age;
+  }
+} console.log(getTheLongestNamesAge(kids));
+//az egesz objektuomt taroljuk le es abbol szedjuk ki az infot
+//
