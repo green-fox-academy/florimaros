@@ -9,11 +9,10 @@ var kids = [
 ];
 
 
-function getAgeByName (kids2, name) {
-  for (var i=0; i<kids2; i++) {
-    if (name === kids2[i].name)  {
-      return kids2[i].age;
-    }
+function getAgeByName (kids, name)
+for (var i= 0; i<kids.length; i++) {
+  if (kids[i].name === name) {
+    return kids[i].age;
   }
 }
 

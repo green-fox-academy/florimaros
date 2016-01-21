@@ -6,15 +6,17 @@ var kids = [
   {name: 'Tiborka', age: 7, sex: 'male'},
   {name: 'Zsolti', age: 6, sex: 'male'},
   {name: 'Gerda', age: 9, sex: 'female'},
-  {name: 'Zsomborka', age: 8, sex: 'male'}
+  {name: 'Zsomborka', age: 9, sex: 'male'}
 ];
 
-function getTheLongestNamesAge(kids2) {
-  var longestname = kids2[0];
-  for (var i = 1; i < kids2.length; i++) {
-    if (kids2[i].name.length > longestname.name.length )  {
-      longestname = kids2[i];    }
-  } return  longestname.age;
+function getTheLongestNamesAge(kids) {
+  var longestname = kids[0];
+  for (var i= 0; i<kids.length; i++) {
+    if (kids[i].name.length > longestname.name.length) {
+      longestname = kids[i];
+    }
+  } return longestname.age;
+
 }
 
 //keszits functiont ami listat kap es nevet es megmondja

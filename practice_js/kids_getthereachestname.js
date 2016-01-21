@@ -8,14 +8,23 @@ var kids = [
   {name: 'Krisztian', candies: 4}
 ];
 
-function  getRichestKidName (kids)  {
-  var reachest = kids[0]
-  for (var i=0; i<length.kids; i++) {
-    if (kids[i].candies > reachest.candies {
-      reachest = kids[i];
-    } return reachest.name;
-  }
+function getRichestKidName (kids) {
+  var output = kids[0];
+  for (var i=0; i < kids.length; i++) {
+    if (kids[i].candies > output.candies) {
+      output = kids[i];
+    }
+  } return output.name;
 }
+function getKidsName (kids) {
+  var list = [];
+  for (var i=0; i<kids.length; i++) {
+    list.push(kids[i].name)
+  }
+  return list;
+}
+console.log (getKidsName(kids));
+
 //ird ki a gyerek nevet akinek a legtobb cukorkaja van
 /*function getRichestKidName(kids) {
   var output = "";

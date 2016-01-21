@@ -8,11 +8,11 @@ var kids = [
     {name: 'Gerda', age: 9, sex: 'female'},
     {name: 'Zsomborka', age: 8, sex: 'male'}
 ];
-function getAges(kids)  {
-  var list = [];
-  for (var i=0; i<kids.length ; i++)  {
-    list.push(kids[i].age)
-  } return list;
+function getAges(kids) {
+  var output = [];
+  for (var i= 0; i < kids.length; i++) {
+    output.push(kids[i].age)
+  } return output;
 }
 
 //visszaadni az osszes kort

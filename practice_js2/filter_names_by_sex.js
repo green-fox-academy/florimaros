@@ -9,15 +9,13 @@ var kids = [
 ];
 
 
-function filterNamesBySex(kids, gender) {
-  var filteredNames = [];
-  kids.forEach(function(kid) {
-    if (kid.sex === gender) {
-      filteredNames.push(kid.name);
-    }
+function groupBySex(kids, gender) {
+  var output = {female: 0, male: 0};
+  for (var i= 0; i<kids.length; i++) {
+    output [kid sex] ++
   });
-  return filteredNames;
+  return output;
 }
 
 
-console.log(filterNamesBySex(kids, 'female')); // ['Julika', 'Gerda']
+console.log(groupBySex(kids, 'female')); // ['Julika', 'Gerda']
