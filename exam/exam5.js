@@ -7,37 +7,43 @@
 // It should have a "deleteCarByType" method that removes the cars from the inner list
 // that have the given type
 
-function CarStore (array_of_cars) {
-  this.cars = array_of_cars;
+function CarStore (cars) {
+  this.cars = cars;
+
   this.addCar = function (type, price, year) {
-    //console.log(type, price, year)
-    this.cars.push({"type": type, "price": price, "year": year})
+    this.cars.push({type: type, price: price, year: year})
   }
-  this.getSumPrice = function ()  {
-    var sum = 0;
-    for(var i=0; i<this.cars.length; i++)  {
-    //  console.log(this.cars[i]);
-      sum += this.cars[i].price;
-    }
-    return sum;
+
+  this.getSumPrice = function () {
+    var carsPrice = 0;
+    this.cars.forEach(function(car) {
+      carsPrice += car.price
+    })
+    return carsPrice;
   }
+
   this.getOldestCarType = function () {
-    var oldestcar = this.cars[0]
-    for (var i=0; i<this.cars.length; i++)  {
-      if (this.cars[i].year < oldestcar.year) {
-        oldestcar = this.cars[i];
+    var oldestCar = this.cars[0];
+    for (var i = 1; i < this.cars.length; i++) {
+      if (this.cars[i].year < oldestCar.year) {
+        oldestCar = this.cars[i];
       }
-    } return oldestcar.type;
+    }
+    return oldestCar.type;
   }
-  this.deleteCarByType = function (type)  {
-    var newcarlist = [];
-    for (var i=0; i<this.cars.length; i++)  {
+
+  this.deleteCarByType = function (type) {
+    var newArrayOfCars = [];
+    for (var i = 0; i < this.cars.length; i++) {
       if (this.cars[i].type !== type) {
-        newcarlist.push(this.cars[i]);
+        newArrayOfCars.push(this.cars[i]);
       }
-    } this.cars = newcarlist;
+    }
+    this.cars = newArrayOfCars
   }
+
 }
+
 var cars = [
   {type: 'Dodge', price: 20000, year: 2012},
   {type: 'Tesla', price: 30000, year: 2015},
