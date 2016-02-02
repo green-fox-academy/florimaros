@@ -9,6 +9,13 @@ var kids = [
   {name: 'Zsomborka', age: 8, sex: 'male'}
 ];
 
-
+function getTheLongestNamesAge(kids) {
+  var object = [];
+  for(var i=0; i<kids.length; i++) {
+    if(kids[i]name.length>object.name.length) {
+      object = kids[i];
+    }
+  } return object.age;
+}
 
 console.log(getTheLongestNamesAge(kids));

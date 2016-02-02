@@ -1,35 +1,26 @@
 'use strict';
 
-var pirates = [
-  {name: 'Jack', id: 1},
-  {name: 'Bob', id: 2},
-  {name: 'Omar', id: 3},
-  {name: 'Olaf', id: 4},
-  {name: 'Boris', id: 5}
-];
+// Write a function that takes an array of numbers,
+// and returns a new array with the same length but all,
+// of it's elements are the triple of the original array's elements!
 
-var stashes = [
-  {pirateId: 3, gold: 4},
-  {pirateId: 4, gold: 1},
-  {pirateId: 2, gold: 5},
-  {pirateId: 5, gold: 3},
-  {pirateId: 1, gold: 8}
-];
 
-function getGoldByPirateName(name)  {
-  var pirateId;
-  for (var i = 0; i<pirates.length; i++)  {
-    if (pirates[i].name === name) {
-      pirateId = pirates[i].id;
-    }
+function tripleEachElement(input) {
+  var output = [];
+  for (var i = 0; i < input.length; i++) {
+    output.push(input[i] * 3);
   }
-  for (var j = 0; j<stashes.length; j++)  {
-    if (stashes[j].pirateId === pirateId) {
-      return stashes[j].gold;
-    }
-  }
+  return output;
+}
+
+function tripleEachElement(input) {
+  var MULTIPLIER = 3;
+  return input.map(function(elem) {
+    return elem * MULTIPLIER;
+  });
 }
 
 
 
-console.log(getGoldByPirateName('Olaf')); // -> 1
+
+console.log(tripleEachElement([4, 6, 3, 2])); // [12, 18, 9, 6]

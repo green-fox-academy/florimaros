@@ -10,10 +10,12 @@ var kids = [
 
 
 function groupBySex(kids, gender) {
-  var output = {female: 0, male: 0};
+  var output = [];
   for (var i= 0; i<kids.length; i++) {
-    output[kids[i].sex] ++
-  });
+    if(kids[i].sex === gender) {
+      output.push(kids[i].name)
+    }
+  }
   return output;
 }
 

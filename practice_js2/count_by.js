@@ -18,6 +18,13 @@ function countBySex(kids) {
 }
 
 function countBySex2(kids) {
+  var output = {female: 0; male: 0};
+  for (var i=0; i<kids.length; i++) {
+    output[kids[i].sex]++
+  } return output;
+}
+
+function countBySex2(kids) {
   var output = {};
   kids.forEach(function(kid) {
     if (!(kid.sex in output)) {
