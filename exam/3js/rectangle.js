@@ -7,15 +7,15 @@
 // it should have a "toString" method that returns it's stats as a string like:
 // 'Length: 5, Width: 3, Perimeter: 16, Area: 15'
 
-function Rectangle (length, width) {
+function Rectangle(length, width) {
   this.getPerimeter = function () {
-    return (length + width) * 2
+    return (width + length) * 2;
   }
-  this.getArea = function ()  {
-    return length * width;
+  this.getArea = function () {
+    return width * length;
   }
   this.toString = function () {
-    return  "Length: " + length + ", Width: " + width +", Perimeter: "+ this.getPerimeter() +", Area: "+ this.getArea()
+    return "Length: " + length + ", Width: " + width + ", Perimeter: " + this.getPerimeter() + ", Area: " + this.getArea();
   }
 }
 
