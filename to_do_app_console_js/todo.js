@@ -13,9 +13,11 @@ function menu () {
     }
     console.log ("\nPlease choose a menu item: ");
   }
+  
 function getMenuitems(index) {
   return menuitems[index-1]
 }
+
 function inputNumber() {
   var choosenumber =  parseInt(readlineSync.question());
 
