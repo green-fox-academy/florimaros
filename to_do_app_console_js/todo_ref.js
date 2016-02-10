@@ -5,62 +5,76 @@
 "use strict";
 
 var readlineSync = require('readline-sync');
-var menuitems = ["List todos", "Add todo", "Remove todo", "Quit"];
-var list_of_todos = ["Buy beer", "Wash the car", "Walk the dog"];
+var menuItems = ["List todos", "Add todo", "Remove todo", "Quit"];
+var listOfTodos = ["Buy beer", "Wash the car", "Walk the dog"];
+
 //hogy kell js-ben fileba irni?
 
-function menu() {
+function showMenu() {
   console.log ("Main menu:\n");
-  for(var i=0; i<menuitems.length; i++) {
-    console.log(i+1 + ". " +  menuitems[i]);
+  for(var i=0; i<menuItems.length; i++) {
+    console.log(i+1 + ". " +  menuItems[i]);
   }
   console.log ("\nPlease choose a menu item: ");
 }
 
-function getMenuitems(index) {
-  return menuitems[index-1];
+function getMenuItem(choosenNumber) {
+  return menuItems[choosenNumber-1];
 }
-
+function isValidChoice(number) {
+  if(number >= 1 && number <= menuItems.length) {
+    return true;
+  } return false;
+}
+function listTodoItems() {
+  console.log("List of todo items:\n");
+  for(var i=0; i<listOfTodos.length; i++) {
+    console.log(i+1 + ". " +  listOfTodos[i]);
+  }
+}
+function removeTodoItem() {
+  var deleteNumber = parseInt(readlineSync.question());
+  var newListOfTodos = [];
+  for(var i=0; i<listOfTodos.length; i++) {
+    if( i !== deleteNumber-1) {
+      newListOfTodos.push(listOfTodos[i])
+    }
+  }
+  listOfTodos = newListOfTodos;
+}
+function addTodoItem() {
+  console.log("Please enter a new todo item:");
+  var todoItem = readlineSync.question();
+  listOfTodos.push(todoItem);
+  console.log("Todo item is saved");
+}
 function inputNumber() {
-  var choosenumber = parseInt(readlineSync.question());
+  var choiceNumber = parseInt(readlineSync.question());
 
-  if(choosenumber >= 1 && choosenumber <= menuitems.length) {
-    console.log(getMenuitems(choosenumber));
-    if(choosenumber===2) {
-      console.log("Please enter a new todo item:");
-      var todoit = readlineSync.question();
-      list_of_todos.push(todoit);
-      console.log("Todo item is saved");
-      menu();
+  if(isValidChoice(choiceNumber)) {
+    console.log(getMenuItem(choiceNumber));
+    if(choiceNumber === 1) {
+      listTodoItems();
+      showMenu();
       inputNumber();
     }
-    else if(choosenumber===1) {
-      console.log("List of todo items:\n");
-      for(var i=0; i<list_of_todos.length; i++) {
-        console.log(i+1 + ". " +  list_of_todos[i]);
-      }
-      menu();
+    else if(choiceNumber === 2) {
+      addTodoItem();
+      showMenu();
       inputNumber();
     }
-    else if(choosenumber===3) {
-      var deletenumber = parseInt(readlineSync.question());
-      var new_list_of_todos = [];
-      for(var i=0; i<list_of_todos.length; i++) {
-        if( i !== deletenumber-1) {
-          new_list_of_todos.push(list_of_todos[i])
-        }
-      }
-      list_of_todos = new_list_of_todos;
-      menu();
+    else if(choiceNumber === 3) {
+      removeTodoItem();
+      showMenu();
       inputNumber();
     }
-    else if(choosenumber===4) {
-  //    console.log(menuitems[3]);
+    else if(choiceNumber === 4) {
+  //    console.log(menuItems[3]);
     }
     else {
-    console.log("wrong input try again");
+    console.log("Wrong input try again!");
     }
   }
 }
-menu();
+showMenu();
 inputNumber();
