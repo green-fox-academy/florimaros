@@ -5,7 +5,7 @@
 "use strict";
 
 var readlineSync = require('readline-sync');
-var menuItems = ["List todos", "Add todo", "Remove todo", "Quit"];
+var menuItems = ["List todos", "Add todo", "Remove todo", "Quit", "Write to file"];
 var listOfTodos = ["Buy beer", "Wash the car", "Walk the dog"];
 
 function showMenu() {
@@ -23,7 +23,8 @@ function getMenuItem(choosenNumber) {
 function isValidChoice(number) {
   if(number >= 1 && number <= menuItems.length) {
     return true;
-  } return false;
+  }
+  return false;
 }
 
 function listTodoItems() {
@@ -51,6 +52,20 @@ function addTodoItem() {
   console.log("Todo item is saved");
 }
 
+function writeToFile() {
+  console.log("Write in txt file:\n");
+  var textList = "";
+  for(var i=0; i<listOfTodos.length; i++) {
+    textList += listOfTodos[i] + "\n";
+  }   var fs = require('fs');
+    //var content = fs.readFileSync('./alma.txt');
+    //var contentString = String(content);
+    //console.log(contentString);
+    // How to write a file
+    fs.writeFileSync('./alma.txt', textList);
+}
+
+
 function getMetod(number) {
   if(number === 1) {
     return listTodoItems
@@ -60,6 +75,9 @@ function getMetod(number) {
   }
   if (number === 3) {
     return removeTodoItem
+  }
+  if (number === 5) {
+    return writeToFile
   }
 }
 
@@ -83,3 +101,6 @@ function inputNumber() {
 }
 showMenu();
 inputNumber();
+
+
+// How to read a file
