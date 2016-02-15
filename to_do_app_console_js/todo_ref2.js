@@ -5,6 +5,7 @@
 "use strict";
 
 var readlineSync = require('readline-sync');
+var fs = require('fs');
 var menuItems = ["List todos", "Add todo", "Remove todo", "Quit", "Write to file", "Load from file"];
 var listOfTodos = ["Buy beer", "Wash the car", "Walk the dog"];
 
@@ -56,25 +57,16 @@ function writeToFile() {
   var textList = "";
   for(var i=0; i<listOfTodos.length; i++) {
     textList += listOfTodos[i] +"\n";
-  }   var fs = require('fs');
-    //var content = fs.readFileSync('./alma.txt');
-    //var contentString = String(content);
-    //console.log(contentString);
-    // How to write a file
+  }
     fs.writeFileSync('./alma.txt', textList);
 }
 
 function loadFromFile() {
-    var fs = require('fs');
     var content = fs.readFileSync('./alma.txt');
     var contentString = String(content);
     var list = contentString.split("\n");
     listOfTodos = list;
-    console.log(listOfTodos) // ['abc', 'abc', 'abc', 'abc']`
-    //console.log(contentString);
-
-    // How to write a file
-    //fs.writeFileSync('./alma.txt', textList);
+    console.log(listOfTodos);
 }
 
 
@@ -116,6 +108,3 @@ function inputNumber() {
 }
 showMenu();
 inputNumber();
-
-
-// How to read a file
