@@ -1,0 +1,19 @@
+{
+  "name": "florimaros",
+  "version": "1.0.0",
+  "description": "uj szoveg\r majom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greenfox-academy/florimaros.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greenfox-academy/florimaros/issues"
+  },
+  "homepage": "https://github.com/greenfox-academy/florimaros#readme"
+}

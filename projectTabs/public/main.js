@@ -1,10 +1,16 @@
 'use strict';
 var content = document.getElementById("content");
+//a htmlben content id-vel rendelkezo elementet a jsen belul a content valtozoval erjuk el
 content.innerHTML = "<p>az elso menut valasztotta</p>";
+//a contentnek a belsejet hatarozzuk meg, megmondja h
 document.getElementById("1").addEventListener("click", function() {
+  //megkeresi azt az elemet ami az 1es idval rendelkezik majd rarakja az esemenyfigyelot(kattintas, ha bekovetkezik, lefuttatja a f-t)
   document.querySelector(".active").classList.remove("active")
   document.getElementById("1").classList.add("active");
   content.innerHTML = "<p>az elso menut valasztotta</p>";
+  //megkeresi az elso elemet ami rendelkezik az aktiv osztalyal, errol a megtalalt elemrol tavolitsuk el az aktiv osztalyt
+  //megkeresi az elemet amire raktuk az esemenyfigyelot, es rarakja az aktiv osztalyt
+  //beallitja a content belsejebe a tartalmat
   //alert("menu1");
 });
 document.getElementById("2").addEventListener("click", function() {
