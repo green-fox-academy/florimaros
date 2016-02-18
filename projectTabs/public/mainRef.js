@@ -16,7 +16,7 @@ var menu1=document.getElementById("1");
 var content1=document.getElementById("content1")
 menu1.addEventListener("click", function() {
   setActiveMenu(menu1)
-  setActiveContent(content2)
+  setActiveContent(content1)
 });
 var menu2=document.getElementById("2")
 var content2=document.getElementById("content2")
