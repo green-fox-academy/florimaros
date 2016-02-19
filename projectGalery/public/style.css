@@ -1,0 +1,5 @@
+.thumbnail {width: 100px; height: 100px; padding-left: 5px; padding-right: 5px; margin-bottom: 10px}
+#wrapper {text-align: center}
+h1 {position: absolute; left: 250px; top: 400px}
+#mainPicture {display: inline; }
+#mainPicture img {width: 250px; height: 250px}
