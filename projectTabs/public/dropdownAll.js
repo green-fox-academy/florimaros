@@ -6,7 +6,7 @@ var dropdownMenu2 = document.querySelector("#menu2")
 var dropdownMenu3 = document.querySelector("#menu3")
 var dropdownMenu4 = document.querySelector("#menu4")
 var contentsMenu = document.querySelector("#contents")
-
+var bodyMenu =
 dropDownToggle.addEventListener("click", function () {
 
   if (dropdownMenu.style.display === "block") {
@@ -18,11 +18,12 @@ dropDownToggle.addEventListener("click", function () {
     contentsMenu.style.display="block"
   }
 })
-
+//bodyra rakni egy event listenert
+//es azon blul kitalalni mikor miket kell kikapcsolni
+//
 function setActiveContent(contentDiv) {
   document.querySelector(".activeContent").classList.remove("activeContent")
   contentDiv.classList.add("activeContent")
-  dropdownMenu.style.display="none"
 }
 
 var menu1=document.getElementById("menu1");
