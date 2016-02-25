@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>basicToDoApp</title>
+    <link rel="stylesheet" href="bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <h1>to do app</h1>
-    <button id="logInButton">login</button>
+    <button class="btn btn-default"  id="logInButton">login</button>
+    <button class="btn btn-default"  id="logOutButton">logout</button>
     <h3>enter your name</h3>
     <input class="userName" type = "text"/>
     <h3>enter your password</h3>
@@ -14,9 +16,11 @@
     <br>
     <br>
     <br>
-    <input class="todoInput" type = "text"/>
-    <button id="addTodo">pressEnterOrClickHere</button>
-    <ul id="items"></ul>
+    <div id="toDoApp" style="display: none">
+      <input class="todoInput" type = "text"/>
+      <button id="addTodo">pressEnterOrClickHere</button>
+      <ul id="items"></ul>
+    </div>
     <script src="main.js">
 
     </script>
